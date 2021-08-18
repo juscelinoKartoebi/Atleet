@@ -1,6 +1,5 @@
 package sr.bludots.assignments;
 
-
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Random;
@@ -17,13 +16,15 @@ import java.util.Random;
 
 public class Atleet {
 
-	public enum Sport {BAANWIELRENNEN, ZWEMMEN, VOETBALLEN, BOKSEN, ATLETIEK};
-    private String voornaam;
+	public enum Sport {
+		BAANWIELRENNEN, ZWEMMEN, VOETBALLEN, BOKSEN, ATLETIEK
+	};
+
+	private String voornaam;
 	private String Achternaam;
 	private Sport sport;
 	private LocalDate geboorteDatum;
-	public ArrayList<Atleet> arrList = new ArrayList<>();
-
+	public ArrayList<Atleet> arrayList = new ArrayList<>();
 
 	public String getVoornaam() {
 		return voornaam;
@@ -70,79 +71,37 @@ public class Atleet {
 		this.geboorteDatum = geboorteDatum;
 
 	}
-		//zoek naar alle atleten die zwemmen en druk deze dan af
-			public static void searchSportType(ArrayList<Atleet> arrayList, Sport searchSportType) {
 
-				for (int i = 0; i < arrayList.size(); i++) {
-					if (arrayList.get(i).getSport().equals(searchSportType)) {
+	// zoek naar alle atleten die zwemmen en druk deze dan af
+	public static void searchSportType(ArrayList<Atleet> arrayList, Sport searchSportType) {
 
-						System.out.println("Voornaam	: " + String.valueOf(arrayList.get(i).getVoornaam()));
-						System.out.println("Achternaam	: " + String.valueOf(arrayList.get(i).getAchternaam()));
-						System.out.println("Sport		: " + String.valueOf(arrayList.get(i).getSport()));
-						System.out.println("GeboorteDatum	: " + String.valueOf(arrayList.get(i).getGeboorteDatum()));
-						System.out.println();
-					}
-				}
+		for (int i = 0; i < arrayList.size(); i++) {
+			if (arrayList.get(i).getSport().equals(searchSportType)) {
+
+				System.out.println("Voornaam	: " + String.valueOf(arrayList.get(i).getVoornaam()));
+				System.out.println("Achternaam	: " + String.valueOf(arrayList.get(i).getAchternaam()));
+				System.out.println("Sport		: " + String.valueOf(arrayList.get(i).getSport()));
+				System.out.println("GeboorteDatum	: " + String.valueOf(arrayList.get(i).getGeboorteDatum()));
+				System.out.println();
 			}
-
-			public static void searchFirstNameAndSportType(ArrayList<Atleet> arrayList, String firstName,
-					Sport searchSportType) {
-
-				for (int i = 0; i < arrayList.size(); i++) {
-					if (arrayList.get(i).getVoornaam().equals(firstName)
-							&& arrayList.get(i).getSport().equals(searchSportType)) {
-
-						System.out.println("Voornaam	: " + String.valueOf(arrayList.get(i).getVoornaam()));
-						System.out.println("Achternaam	: " + String.valueOf(arrayList.get(i).getAchternaam()));
-						System.out.println("Sport		: " + String.valueOf(arrayList.get(i).getSport()));
-						System.out.println("GeboorteDatum	: " + String.valueOf(arrayList.get(i).getGeboorteDatum()));
-						System.out.println();
-					}
-				}
-			}
-
 		}
+	}
 
-		class RandomBirthDate {
+	// zoek naar alle atleten die jair heten en zwemmen en druk deze dan af
+	public static void searchFirstNameAndSportType(ArrayList<Atleet> arrayList, String firstName,
+			Sport searchSportType) {
 
-			private static Random random;
-			private static int day;
-			private static int month;
-			private static int year;
+		for (int i = 0; i < arrayList.size(); i++) {
+			if (arrayList.get(i).getVoornaam().equals(firstName)
+					&& arrayList.get(i).getSport().equals(searchSportType)) {
 
-			public static int randomYear() {
-
-				random = new Random();
-
-				int firstYear = 1990;
-				int finalYear = 2005;
-				year = random.nextInt(finalYear - firstYear) + firstYear;
-
-				return year;
+				System.out.println("Voornaam	: " + String.valueOf(arrayList.get(i).getVoornaam()));
+				System.out.println("Achternaam	: " + String.valueOf(arrayList.get(i).getAchternaam()));
+				System.out.println("Sport		: " + String.valueOf(arrayList.get(i).getSport()));
+				System.out.println("GeboorteDatum	: " + String.valueOf(arrayList.get(i).getGeboorteDatum()));
+				System.out.println();
 
 			}
-
-			public static int randomMonth() {
-
-				random = new Random();
-
-				int firstMonth = 1;
-				int finalMonth = 12;
-				month = random.nextInt(finalMonth - firstMonth) + firstMonth;
-				return month;
-
-			}
-
-			public static int randomDay() {
-
-				random = new Random();
-
-				int firstDay = 1;
-				int finalDay = 28;
-				day = random.nextInt(finalDay - firstDay) + firstDay;
-
-				return day;
-
-			}
-
+		}
+	}
 }
