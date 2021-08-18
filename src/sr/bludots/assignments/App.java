@@ -31,8 +31,6 @@ public class App {
 			Atleet atleet = new Atleet(voornamen[chooseVoornaam], achternamen[chooseAchternaam], sports[chooseSport],
 					geboorteDatum[choosegeboorteDatum]);
 
-//			LocalDate.of(birthdate.randomYear(), birthdate.randomMonth(), birthdate.randomDay())
-
 			Atleten.add(atleet);
 
 		}
