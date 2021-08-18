@@ -2,7 +2,7 @@ package sr.bludots.assignments;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Random;
+
 
 //
 //Assignment 1: Maak een lijst van 50 atleten.
@@ -56,12 +56,6 @@ public class Atleet {
 
 	public void setGeboorteDatum(LocalDate geboorteDatum) {
 		this.geboorteDatum = geboorteDatum;
-//	}
-//
-//	public int getAge() {
-//		LocalDate now = LocalDate.now();
-//		LocalDate diff = now.minusYears(geboorteDatum.getYear());
-//		return diff.getYear();
 	}
 
 	public Atleet(String voornaam, String achternaam, Sport sport, LocalDate geboorteDatum) {
