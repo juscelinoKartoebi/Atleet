@@ -81,7 +81,7 @@ public class SportAtleet {
 		System.out.println("Voornaam	: " + getVoornaam());
 		System.out.println("Achternaam	: " + getAchternaam());
 		System.out.println("Sport		: " + getSport());
-		System.out.println("GeboorteDatum	: " + getGeboorteDatum());
+		System.out.println("GeboorteDatum	: " + getGeboorteDatum().getDayOfMonth()+" "+ getGeboorteDatum().getMonth()+" "+getGeboorteDatum().getYear());
 		System.out.println("Individueel : " + getSport().isIndividueel());
 		System.out.println();
 
