@@ -86,7 +86,7 @@ public class AtleetManager {
 //		search(Sport.ZWEMMEN);
 		
 		// Druk af hoeveel sporters er zijn die geboren zijn in 2000-2002
-	athletesBetween2000En2002(atletenList);
+//	athletesBetween2000En2002(atletenList);
 		
 		// of atleten die zwemmen
 //		search("", Sport.ZWEMMEN);
