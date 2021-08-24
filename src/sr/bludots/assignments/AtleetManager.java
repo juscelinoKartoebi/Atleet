@@ -10,12 +10,12 @@ import sr.bludots.assignments.SportAtleet.Sport;
 /*
  * Assignment:
  * 
- * 1) Zorg ervoor dat de geboortedatum willekeurig is tussen 2 data  //
+ * 1) Zorg ervoor dat de geboortedatum willekeurig is tussen 2 data      //
  * bijv atleten moeten geboren zijn tussen 1990 - 2003
  * 
- * 2) Zoek naar alle individuele sporters                           //
+ * 2) Zoek naar alle individuele sporters                               //
  * 
- * 3) Druk af hoeveel teamsporters er in de lijst zitten
+ * 3) Druk af hoeveel teamsporters er in de lijst zitten               //
  * 
  * 4) Druk af hoeveel sporters er zijn die jarig zijn in Maart
  *
@@ -33,7 +33,7 @@ public class AtleetManager {
 	public static void search(Sport searchSportType) {
 		search("", searchSportType);
 	}
-	
+//	Zoek naar alle individuele sporters   
 	public static void search (boolean isIndividueel) {
 		for (int i = 0; i < atletenList.size(); i++){
 			SportAtleet atleet = atletenList.get(i);
@@ -43,6 +43,7 @@ public class AtleetManager {
 			
 		}
 	}
+//	Druk af hoeveel sporters er zijn die geboren zijn in 2000-2002  
 	public static void playersBetween2000En2002(ArrayList<SportAtleet> atletenList) {
 		int playersBetween2000En2002 = 0;
 		for (int i = 0; i < atletenList.size(); i++) {
@@ -66,6 +67,7 @@ public class AtleetManager {
 			}
 		}
 	}
+//	Druk af hoeveel teamsporters er in de lijst zitten 
 	public static void totalTeamSporters(ArrayList<SportAtleet> atletenList) {
 		int aantalTeamSporters = 0;
 		for(int i = 0; i < atletenList.size(); i++) {
@@ -92,11 +94,11 @@ public class AtleetManager {
 		// zoek naar alle atleten die jair heten en zwemmen en druk deze dan af
 //		search("Jair", Sport.ZWEMMEN);
 		
-		// zoek naar alle atleten tussen 1990 en 2003
-//		search();
+		// Druk af hoeveel sporters er zijn die jarig zijn in Maart
+//		search(); NOG NIET KUNNEN DOEN
 		
 		// zoek naar alle individuele sporters
-//		search(true);
+		search(true);
 		
 //		Druk af hoeveel teamsporters er in de lijst zitten
 //		totalTeamSporters(atletenList);
