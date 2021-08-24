@@ -44,13 +44,13 @@ public class AtleetManager {
 		}
 	}
 //	Druk af hoeveel sporters er zijn die geboren zijn in 2000-2002  
-	public static void playersBetween2000En2002(ArrayList<SportAtleet> atletenList) {
-		int playersBetween2000En2002 = 0;
+	public static void athletesBetween2000En2002(ArrayList<SportAtleet> atletenList) {
+		int athletesBetween2000En2002 = 0;
 		for (int i = 0; i < atletenList.size(); i++) {
 			if(atletenList.get(i).getGeboorteDatum().getYear() >=2000 && atletenList.get(i).getGeboorteDatum().getYear()<=2002) {
-				playersBetween2000En2002++;
+				athletesBetween2000En2002++;
 			}
-			System.out.println("Total players born between 2000 en 2002: " + playersBetween2000En2002);
+			System.out.println("Total athletes born between 2000 en 2002: " + athletesBetween2000En2002);
 		}
 		
 	}
@@ -86,7 +86,7 @@ public class AtleetManager {
 //		search(Sport.ZWEMMEN);
 		
 		// Druk af hoeveel sporters er zijn die geboren zijn in 2000-2002
-//	playersBetween2000En2002(atletenList);
+	athletesBetween2000En2002(atletenList);
 		
 		// of atleten die zwemmen
 //		search("", Sport.ZWEMMEN);
@@ -133,13 +133,6 @@ public class AtleetManager {
 //			int maand = random.nextInt(chooseMaand.length)+1;
 			
 			int jaar = random.nextInt(2003 - 1990) + 1990;
-			
-//			LocalDate start = LocalDate.of(1990, Month.JANUARY, 1);
-//		    LocalDate end = LocalDate.of(2005,Month.DECEMBER, 31);
-//		    long days = ChronoUnit.DAYS.between(start, end);
-//		    LocalDate randomDate = start.plusDays(new Random().nextInt((int) days + 1));
-//		    System.out.println(randomDate);
-//			
 		
 			SportAtleet atleet = new SportAtleet(voornamen[chooseVoornaam], achternamen[chooseAchternaam], 
 					Sport.values()[chooseSport], LocalDate.of(jaar, maand, dag));
