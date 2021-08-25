@@ -44,7 +44,7 @@ public class AtleetManager {
 		}
 	}
 //	Druk af hoeveel sporters er zijn die geboren zijn in 2000-2002  
-	public static void searchAthletesBetween2000En2002(ArrayList<SportAtleet> atletenList) {
+	public static void printAthletesBetween2000En2002(ArrayList<SportAtleet> atletenList) {
 		int athletesBetween2000En2002 = 0;
 		for (int i = 0; i < atletenList.size(); i++) {
 			if(atletenList.get(i).getGeboorteDatum().getYear() >=2000 && atletenList.get(i).getGeboorteDatum().getYear()<=2002) {
@@ -68,7 +68,7 @@ public class AtleetManager {
 		}
 	}
 //	Druk af hoeveel teamsporters er in de lijst zitten 
-	public static void totalTeamSporters(ArrayList<SportAtleet> atletenList) {
+	public static void printTotalTeamSporters(ArrayList<SportAtleet> atletenList) {
 		int aantalTeamSporters = 0;
 		for(int i = 0; i < atletenList.size(); i++) {
 			if(!atletenList.get(i).getSport().isIndividueel()) {
